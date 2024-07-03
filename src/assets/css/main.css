@@ -82,20 +82,20 @@ html {
 }
 
 body {
-  background: var(--backgroundColor);
-  color: var(--textColor);
-  font-family: var(--bodyFont);
+  /* background: var(--backgroundColor); */
+  /* color: var(--textColor);
+  font-family: var(--bodyFont); */
   font-weight: 400;
   line-height: 1.75;
 }
 
-p {
+/* p {
   margin: 0;
   margin-bottom: 1rem;
   max-width: 40em;
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -127,7 +127,7 @@ h4 {
 
 h5 {
   font-size: 1.25rem;
-}
+} */
 
 small,
 .text-small {
@@ -190,7 +190,7 @@ hr {
   border-top: var(--line);
 }
 
-button,
+/* button,
 .btn {
   cursor: pointer;
   appearance: none;
@@ -225,7 +225,7 @@ button.hipster:hover {
 }
 button.block {
   width: 100%;
-}
+} */
 
 /* Basic Classes */
 .alert {

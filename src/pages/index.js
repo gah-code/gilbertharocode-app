@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
-import { Heading, Text, Link } from 'theme-ui';
+import { Heading, Text, Link, Divider } from 'theme-ui';
 import theme from '../gatsby-plugin-theme-ui';
 import styled from 'styled-components';
-
+import About from '../components/About';
+import Background from '../components/Background';
 import { StaticImage } from 'gatsby-plugin-image';
 import AllRecipes from '../components/AllRecipes';
 import Hero from '../components/Hero';
@@ -60,13 +61,13 @@ const IndexPage = ({ data }) => {
               ...theme.styles.h1,
             }}
           >
-            greetings
+            Hola
             {/* {frontmatter.greetings} */}
             <span role='img' aria-label='emoji'>
               {/* {frontmatter.emoji} */}
             </span>
             <br />
-            title
+            I'm Gilbert
             {/* {frontmatter.title} */}
           </Heading>
           <Heading
@@ -74,16 +75,17 @@ const IndexPage = ({ data }) => {
               ...theme.styles.h3,
             }}
           >
-            subtitleHighlight
+            Surfing the world wide web
+            <br />
             {/* {frontmatter.subtitlePrefix}{' '} */}
-            {/* <span className='highlighted'>{frontmatter.subtitleHighlight}</span> */}
+            <span className='highlighted'>for all front end dev insight</span>
           </Heading>
           <Heading
             sx={{
               ...theme.styles.h4,
             }}
           >
-            body
+            Thanks for stopping by!
             {/* {rawMarkdownBody} */}
           </Heading>
 
@@ -120,9 +122,13 @@ const IndexPage = ({ data }) => {
           </Text>
         </StyledSection>
 
-        <Hero content={data.hero} />
+        <Divider />
+        <About />
+        <Divider />
+        <Background />
+        {/* <Hero content={data.hero} /> */}
 
-        <header className='hero'>
+        {/* <header className='hero'>
           <StaticImage
             src='../assets/images/main.jpeg'
             alt='eggs'
@@ -131,7 +137,7 @@ const IndexPage = ({ data }) => {
             layout='fullWidth'
           ></StaticImage>
 
-          {/* <Hero content={heroContent} /> */}
+          
 
           <div className='hero-container'>
             <div className='hero-text'>
@@ -139,7 +145,7 @@ const IndexPage = ({ data }) => {
               <h4>no fluff, just recipes</h4>
             </div>
           </div>
-        </header>
+        </header> */}
         {/* <AllBlogs /> */}
         <AllRecipes />
       </main>

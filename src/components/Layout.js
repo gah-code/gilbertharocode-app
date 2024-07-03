@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-
+import Header from './Header';
 // import '../assets/css/reset.css';
 import { ThemeUIProvider } from 'theme-ui';
 import theme from '../gatsby-plugin-theme-ui';
@@ -28,7 +28,8 @@ const Layout = ({ children }) => {
       <ThemeUIProvider theme={theme}>
         <StyledLayout>
           <GlobalStyle />
-          <Navbar />
+          <Header />
+          {/* <Navbar /> */}
           {children}
           <Footer />
         </StyledLayout>

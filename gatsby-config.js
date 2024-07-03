@@ -13,14 +13,16 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Simply Recipes',
-    description: 'Nice and clean recipes site',
-    author: '@gilbertharo',
+    title: `Frontend Things`,
+    description: `Front End Developer located in San Jose Ca Bay Area, passionate about transforming ideas into reality through coding, thanks for stopping by!`,
+    author: 'gilbert haro',
+    siteUrl: `https://gilbertaharo.com`,
+    logo: `.gah`,
     person: { name: 'gilbert', age: 28 },
-    simpleData: ['item 1', 'item 2'],
+    simpleData: ['gatsby', 'theme ui'],
     complexData: [
-      { name: 'gilbert', age: 28 },
-      { name: 'steph', age: 28 },
+      { name: 'gilbert haro', age: 29 },
+      { name: 'gilberto a haro', age: 29 },
     ],
   },
   plugins: [
