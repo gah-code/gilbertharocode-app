@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import TagsListBlogs from './TagsListBlog';
-
+import BlogsList from './BlogsList';
 const query = graphql`
   query {
     allContentfulBlog {
@@ -13,6 +13,12 @@ const query = graphql`
         id
         readTime
         title
+        content {
+          tags
+        }
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        }
       }
     }
   }
@@ -23,6 +29,7 @@ const AllBlogs = () => {
   return (
     <div>
       <TagsListBlogs blogs={blogs} />
+      <BlogsList blogs={blogs} />
     </div>
   );
 };

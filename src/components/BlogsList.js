@@ -16,8 +16,8 @@ const BlogsList = ({ blogs = [] }) => {
               className='recipe-img'
               alt={title}
             />
-            <h5>{title}</h5>
-            <h1>{description}</h1>
+            <h3>{title}</h3>
+            <p>{description.description}</p>
             {/* <p>
               Prep : {prepTime}min | Cook : {cookTime}min
             </p> */}

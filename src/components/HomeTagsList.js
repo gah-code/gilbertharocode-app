@@ -1,31 +1,9 @@
 import React from 'react';
-import setupBlogTags from '../utils/setupBlogTags';
+import setupTags from '../utils/setupTags';
+import styled from 'styled-components';
+import RecipeTemplate from '../pages/{ContentfulRecipe.title}';
 import { Link } from 'gatsby';
 import slugify from 'slugify';
-import styled from 'styled-components';
-
-// const TagsListBlog = ({ blogs }) => {
-//   const newTags = setupBlogTags(blogs);
-//   return (
-//     <div className='tag-container'>
-//       <h4>blogs</h4>
-//       <div className='tags-list'>
-//         {newTags.map((tag, index) => {
-//           const [text, value] = tag;
-//           const slug = slugify(text, { lower: true });
-
-//           return (
-//             <Link to={`/tags/${slug}`} key={index}>
-//               {text} ({value})
-//             </Link>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TagsListBlog;
 
 const TagContainer = styled.div`
   padding: 20px;
@@ -61,12 +39,12 @@ const TagItem = styled(Link)`
   }
 `;
 
-const TagsListBlog = ({ blogs }) => {
-  const newTags = setupBlogTags(blogs);
+const HomeTagsList = ({ recipes }) => {
+  const newTags = setupTags(recipes);
 
   return (
     <TagContainer>
-      <h4>Blogs</h4>
+      <h4>Tags</h4>
       <TagList>
         {newTags.map((tag, index) => {
           const [text, value] = tag;
@@ -83,4 +61,4 @@ const TagsListBlog = ({ blogs }) => {
   );
 };
 
-export default TagsListBlog;
+export default HomeTagsList;

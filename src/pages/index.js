@@ -9,6 +9,7 @@ import Background from '../components/Background';
 import { StaticImage } from 'gatsby-plugin-image';
 import AllRecipes from '../components/AllRecipes';
 import Hero from '../components/Hero';
+import HomeTagsList from '../components/HomeTagsList';
 import SEO from '../components/SEO';
 import AllBlogs from '../components/AllBlogs';
 
@@ -123,6 +124,8 @@ const IndexPage = ({ data }) => {
         </StyledSection>
 
         <Divider />
+        {/* <HomeTagsList /> */}
+        <AllBlogs />
         <About />
         <Divider />
         <Background />
@@ -146,7 +149,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
         </header> */}
-        {/* <AllBlogs /> */}
+
         <AllRecipes />
       </main>
     </Layout>
