@@ -12,8 +12,8 @@ import Hero from '../components/Hero';
 import HomeTagsList from '../components/HomeTagsList';
 import SEO from '../components/SEO';
 import AllBlogs from '../components/AllBlogs';
-import Card from '../components/Card';
-import Slider from '../components/Slider';
+import Slider from '../components/temp/Slider';
+import CardSlider from '../components/CardSlider';
 
 const StyledSection = styled.section`
   padding: 5rem 1rem 8rem 1rem;
@@ -125,7 +125,7 @@ const IndexPage = ({ data }) => {
           </Text>
         </StyledSection>
 
-        {/* <Card /> */}
+        <CardSlider />
         {/* <Slider /> */}
         <Divider />
         <Divider />

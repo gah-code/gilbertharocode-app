@@ -13,6 +13,11 @@
 - npm install framer-motion
 - npm install react-icons --save
 - Blog / Article Card Component
+- Updated CardSlider to pull and display only the first tag from the blog data.
+- Modified the GraphQL query to fetch necessary blog fields.
+- Integrated styled-components for improved styling and layout.
+- Ensured the Card component displays the blog title and the first tag properly.
+- Cleaned up unused code and commented-out sections for better readability."
 
 <!-- <h1>Title</h1>
         <Heading // apply both the heading styles and the color style

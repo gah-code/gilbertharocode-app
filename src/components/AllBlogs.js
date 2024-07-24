@@ -3,6 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import TagsListBlogs from './TagsListBlog';
 import BlogsList from './BlogsList';
 import styled from 'styled-components';
+import CardSlider from './CardSlider'; // Updated import
+
 const query = graphql`
   query {
     allContentfulBlog {
@@ -56,6 +58,7 @@ const AllBlogs = () => {
       <section className='blog-container'>
         <TagsListBlogs blogs={blogs} />
         <BlogsList blogs={blogs} />
+        {/* <CardSlider blogs={blogs} /> */}
       </section>
     </StyledSection>
   );
