@@ -4,7 +4,7 @@ import { Heading, Text, Link } from 'theme-ui';
 import theme from '../gatsby-plugin-theme-ui';
 
 const StyledSection = styled.section`
-  padding: 5rem 2rem 8rem 2rem;
+  padding: 5rem 0.5rem 8rem 0.5rem;
 
   .title {
     margin-bottom: 0.8rem;
@@ -30,7 +30,7 @@ const StyledSection = styled.section`
 
   @media (max-width: 59em) {
     .description {
-      padding: 5rem 0 1rem 0;
+      padding: 5rem 0 3rem 0;
     }
   }
 `;

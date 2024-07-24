@@ -12,9 +12,11 @@ import Hero from '../components/Hero';
 import HomeTagsList from '../components/HomeTagsList';
 import SEO from '../components/SEO';
 import AllBlogs from '../components/AllBlogs';
+import Card from '../components/Card';
+import Slider from '../components/Slider';
 
 const StyledSection = styled.section`
-  padding: 5rem 2rem 8rem 2rem;
+  padding: 5rem 1rem 8rem 1rem;
 
   .title {
     margin-bottom: 0.8rem;
@@ -123,7 +125,13 @@ const IndexPage = ({ data }) => {
           </Text>
         </StyledSection>
 
+        {/* <Card /> */}
+        {/* <Slider /> */}
         <Divider />
+        <Divider />
+
+        <Divider />
+
         {/* <HomeTagsList /> */}
         <AllBlogs />
         <About />

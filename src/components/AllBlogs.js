@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import TagsListBlogs from './TagsListBlog';
 import BlogsList from './BlogsList';
+import styled from 'styled-components';
 const query = graphql`
   query {
     allContentfulBlog {
@@ -23,14 +24,40 @@ const query = graphql`
     }
   }
 `;
+const StyledSection = styled.section`
+  max-width: 120rem;
+  padding: 3.9rem 1.5rem;
+
+  @media (max-width: 84em) {
+    column-gap: 5rem;
+    row-gap: 7rem;
+  }
+
+  @media (max-width: 75em) {
+    column-gap: 2rem;
+    row-gap: 6.9rem;
+  }
+
+  @media (max-width: 59em) {
+    column-gap: 1rem;
+    row-gap: 6rem;
+  }
+
+  @media (max-width: 34em) {
+    padding: 3rem 0.8rem 2rem 0.8rem;
+    row-gap: 5rem;
+  }
+`;
 const AllBlogs = () => {
   const data = useStaticQuery(query);
   const blogs = data.allContentfulBlog.nodes;
   return (
-    <div>
-      <TagsListBlogs blogs={blogs} />
-      <BlogsList blogs={blogs} />
-    </div>
+    <StyledSection>
+      <section className='blog-container'>
+        <TagsListBlogs blogs={blogs} />
+        <BlogsList blogs={blogs} />
+      </section>
+    </StyledSection>
   );
 };
 

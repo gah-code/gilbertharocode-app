@@ -16,11 +16,12 @@ const BlogsList = ({ blogs = [] }) => {
               className='recipe-img'
               alt={title}
             />
-            <h3>{title}</h3>
-            <p>{description.description}</p>
-            {/* <p>
-              Prep : {prepTime}min | Cook : {cookTime}min
-            </p> */}
+            <h5>{title}</h5>
+            {/* <p>{description.description}</p> */}
+            <p>
+              data
+              {/* Prep : {prepTime}min | Cook : {cookTime}min */}
+            </p>
           </Link>
         );
       })}
