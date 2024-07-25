@@ -62,18 +62,18 @@ const TagItem = styled(Link)`
 `;
 
 const TagsListBlog = ({ blogs }) => {
-  const newTags = setupBlogTags(blogs);
+  const newBlogTags = setupBlogTags(blogs);
 
   return (
     <div className='tag-container'>
       <h4>Blogs</h4>
       <div className='tags-list'>
-        {newTags.map((tag, index) => {
+        {newBlogTags.map((tag, index) => {
           const [text, value] = tag;
           const slug = slugify(text, { lower: true });
 
           return (
-            <Link to={`/tags/${slug}`} key={index}>
+            <Link to={`/blogTags/${slug}`} key={index}>
               {text} ({value})
             </Link>
           );

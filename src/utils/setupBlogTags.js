@@ -10,13 +10,13 @@ const setupBlogTags = (blogs) => {
       }
     });
   });
-  const newTags = Object.entries(allTags).sort((a, b) => {
+  const newBlogTags = Object.entries(allTags).sort((a, b) => {
     const [firstTag] = a;
     const [secondTag] = b;
     return firstTag.localeCompare(secondTag);
   });
 
-  return newTags;
+  return newBlogTags;
 };
 
 export default setupBlogTags;

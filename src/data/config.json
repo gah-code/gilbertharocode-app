@@ -1,0 +1,15 @@
+{
+  "siteTitle": "My Awesome Site",
+  "siteDescription": "Surfing the world wide web for all front end dev insight",
+  "author": "John Doe",
+  "socialLinks": [
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/johndoe"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/johndoe"
+    }
+  ]
+}

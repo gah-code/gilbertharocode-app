@@ -57,14 +57,14 @@ const ArticlesWrapper = styled.div`
 `;
 
 const Card = styled.div`
-  width: 16.45rem;
-  height: 12.5rem;
+  width: 16.42rem;
+  height: 12.1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
   margin: 2rem 1rem;
-  background-color: #333;
+  background-color: #314237;
   border-radius: 20px;
   flex-shrink: 0; /* Prevent shrinking */
   transition: box-shadow 0.3s ease-out;

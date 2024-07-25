@@ -34,32 +34,55 @@ exports.createPages = async ({ graphql, actions }) => {
 
 // const templatePath = path.resolve(`PATH/TO/TEMPLATE.js`);
 
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions;
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
 
-//   const result = await graphql(`
-//     query {
-//       allContentfulBlog {
-//         nodes {
-//           description {
-//             description
-//           }
-//           featured
-//           id
-//           readTime
-//           title
-//         }
-//       }
-//     }
-//   `);
+  const result = await graphql(`
+    query GetBlogs {
+      allContentfulBlog {
+        nodes {
+          content {
+            tags
+          }
+          description {
+            description
+          }
+          featured
+          id
+          readTime
+          title
+        }
+      }
+    }
+  `);
 
-//   result.data.allContentfulBlog.forEach((node) => {
-//     createPage({
-//       path: node.id,
-//       component: templatePath,
-//       context: {
-//         id: node.id,
-//       },
-//     });
-//   });
-// };
+  result.data.allContentfulBlog.nodes.forEach((blog) => {
+    blog.content.tags.forEach((tag) => {
+      const tagSlug = slugify(tag, { lower: true });
+      createPage({
+        path: `/blogTags/${tagSlug}`,
+        component: path.resolve(`src/templates/blog-tag-template.js`),
+        context: {
+          tag: tag,
+        },
+      });
+    });
+  });
+};
+
+// gatsby-node.js
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type ConfigJson implements Node {
+      siteTitle: String
+      socialLinks: [SocialLinkJson]
+    }
+
+    type SocialLinkJson implements Node {
+      platform: String
+      url: String
+    }
+  `;
+  createTypes(typeDefs);
+};

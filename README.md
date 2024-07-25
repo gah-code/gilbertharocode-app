@@ -18,6 +18,12 @@
 - Integrated styled-components for improved styling and layout.
 - Ensured the Card component displays the blog title and the first tag properly.
 - Cleaned up unused code and commented-out sections for better readability."
+- Blog routing and tag template config -> [docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#createPages)
+
+- Fixed GraphQL query to correctly fetch data from `allDataJson`.
+- Updated `ComponentName` component to match the JSON structure and render site title, description, author, and social links.
+- Added debugging information to log fetched data.
+- Ensured proper handling and rendering of JSON data fields.
 
 <!-- <h1>Title</h1>
         <Heading // apply both the heading styles and the color style

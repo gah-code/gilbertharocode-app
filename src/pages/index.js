@@ -14,6 +14,7 @@ import SEO from '../components/SEO';
 import AllBlogs from '../components/AllBlogs';
 import Slider from '../components/temp/Slider';
 import CardSlider from '../components/CardSlider';
+import ComponentData from '../components/ComponentData';
 
 const StyledSection = styled.section`
   padding: 5rem 1rem 8rem 1rem;
@@ -125,15 +126,14 @@ const IndexPage = ({ data }) => {
           </Text>
         </StyledSection>
 
+        <ComponentData />
+
         <CardSlider />
         {/* <Slider /> */}
         <Divider />
-        <Divider />
-
-        <Divider />
 
         {/* <HomeTagsList /> */}
-        <AllBlogs />
+        {/* <AllBlogs /> */}
         <About />
         <Divider />
         <Background />
@@ -158,7 +158,7 @@ const IndexPage = ({ data }) => {
           </div>
         </header> */}
 
-        <AllRecipes />
+        {/* <AllRecipes /> */}
       </main>
     </Layout>
   );
