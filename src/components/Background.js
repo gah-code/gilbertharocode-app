@@ -180,19 +180,16 @@ const Background = ({ content }) => {
         <div className='data'>
           {/* <SkillList /> */}
 
-          <article className='second-column'>
-            <div>
-              {/* <h4>What I love Building with </h4> */}
+          {/* <h4>What I love Building with </h4> */}
 
-              <p className='single-tool'>Styled Components</p>
-              <p className='single-tool'>Headless architecture</p>
-              <p className='single-tool'>Astro + Netlify</p>
-              <p className='single-tool'>Intrinsic SCSS</p>
-              <p className='single-tool'>Design Graph</p>
-              <p className='single-tool'>SEO</p>
-            </div>
-          </article>
+          <p className='single-tool'>Styled Components</p>
+          <p className='single-tool'>Headless architecture</p>
+          <p className='single-tool'>Astro + Netlify</p>
+          <p className='single-tool'>Intrinsic SCSS</p>
+          <p className='single-tool'>Design Graph</p>
+          <p className='single-tool'>SEO</p>
         </div>
+
         <div>
           <Text
             sx={{
@@ -289,8 +286,8 @@ const StyledSection = styled.section`
   }
 
   li {
-    color: #263147;
-    background-color: blue;
+    /* color: #263147; */
+    /* background-color: blue; */
     max-width: 30rem;
   }
   .data {

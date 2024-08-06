@@ -1,7 +1,28 @@
 {
   "siteTitle": "My Awesome Site",
   "siteDescription": "Surfing the world wide web for all front end dev insight",
-  "author": "John Doe",
+  "author": "Gilberto A Haro",
+  "hero": {
+    "image": "https://example.com/hero-image.jpg",
+    "altText": "A visual representation of front-end development",
+    "heroHeading": "Exploring the World of Front-End Development",
+    "heroSubheading": "A Journey Through Evolving Technologies",
+    "heroDescription": "It's mind-boggling how active the front-end development ecosystem has been. It feels like not so long ago I stumbled upon this world while needing a solution to market my photography services at the time. The variety of frameworks that have come, gone, and remained the most used before I even began my front-end journey is remarkable."
+  },
+  "intro": {
+    "heading": "A Remarkable Evolution",
+    "content": "The variety of frameworks that have come, gone, and remained the most used before I began even began my front-end journey is remarkable."
+  },
+  "content": [
+    {
+      "type": "h2",
+      "text": "Discoveries and Concepts"
+    },
+    {
+      "type": "p",
+      "text": "This is where I compile some of my favorite discoveries and concepts."
+    }
+  ],
   "socialLinks": [
     {
       "platform": "Twitter",

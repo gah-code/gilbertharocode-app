@@ -9,6 +9,9 @@ const ComponentData = () => {
           author
           siteDescription
           siteTitle
+          hero {
+            heroHeading
+          }
           socialLinks {
             platform
             url
@@ -30,6 +33,7 @@ const ComponentData = () => {
   return (
     <div>
       <h1>{config.siteTitle}</h1>
+      <h1>{config.hero.heroHeading}</h1>
       <p>{config.siteDescription}</p>
       <p>
         <strong>Author:</strong> {config.author}
