@@ -173,7 +173,6 @@ const skills = [
 ];
 
 const Background = ({ content }) => {
-  // const { frontmatter, rawMarkdownBody } = content;
   return (
     <StyledSection>
       <div className='container grid-2'>
@@ -197,7 +196,6 @@ const Background = ({ content }) => {
             }}
           >
             FRONT END OCEAN
-            {/* {frontmatter.subtitle} */}
           </Text>
           <Heading
             sx={{
@@ -205,7 +203,6 @@ const Background = ({ content }) => {
             }}
           >
             Fast Moveing Front End
-            {/* {frontmatter.title} */}
           </Heading>
           <Text sx={theme.text.paragraph}>Like many developers,</Text>
           <span className='highlighted'>
