@@ -9,7 +9,7 @@ Welcome to the GilbertharoCode App! This repository hosts the source code for a 
 
 ## Overview
 
-The GilbertharoCode App is a platform for sharing coding projects, tutorials, and resources. Built using modern web technologies, this application aims to provide an engaging and informative experience for developers of all levels.
+A platform for sharing coding projects, tutorials, and resources. Built using modern web technologies, this application aims to provide an engaging and informative experience for developers of all levels.
 
 ## Features
 
@@ -17,6 +17,7 @@ The GilbertharoCode App is a platform for sharing coding projects, tutorials, an
 - **Tutorials**: Share step-by-step tutorials on various programming topics.
 - **Resource Library**: Offer a collection of useful resources such as documentation, tools, and libraries.
 - **Responsive Design**: Ensure the app looks great on all devices, from desktops to mobile phones.
+- **Contentful Integration**: Seamlessly integrate with Contentful CMS to manage and deliver content dynamically.
 
 ## Updates
 
