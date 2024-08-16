@@ -1,5 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Heading, Text, Link } from 'theme-ui';
+import theme from '../gatsby-plugin-theme-ui';
 
 const ComponentData = () => {
   const data = useStaticQuery(graphql`
@@ -9,6 +11,7 @@ const ComponentData = () => {
           author
           siteDescription
           siteTitle
+          siteTitleTwo
           hero {
             heroHeading
           }
@@ -32,7 +35,23 @@ const ComponentData = () => {
 
   return (
     <div>
-      <h1>{config.siteTitle}</h1>
+      <Heading
+        sx={{
+          ...theme.styles.h1,
+        }}
+      >
+        {config.siteTitle}
+        <span></span>
+        <br />
+        {config.siteTitleTwo}
+      </Heading>
+      <Heading
+        sx={{
+          ...theme.styles.h1,
+        }}
+      >
+        {config.siteTitleTwo}
+      </Heading>
       <h1>{config.hero.heroHeading}</h1>
       <p>{config.siteDescription}</p>
       <p>

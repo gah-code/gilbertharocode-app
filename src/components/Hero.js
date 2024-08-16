@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Heading, Text, Link } from 'theme-ui';
 import theme from '../gatsby-plugin-theme-ui';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const StyledSection = styled.section`
-  padding: 5rem 0.5rem 8rem 0.5rem;
+  padding: 5rem 1rem 8rem 1rem;
 
   .title {
     margin-bottom: 0.8rem;
@@ -35,15 +36,34 @@ const StyledSection = styled.section`
   }
 `;
 
-const Hero = ({ content }) => {
-  // Check if content is not null before destructuring
-  if (!content) {
-    // You could return a loading indicator, a placeholder, or simply null
-    return <StyledSection>No hero content available.</StyledSection>;
-  }
+const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allDataJson {
+        nodes {
+          author
+          siteDescription
+          siteTitle
+          siteTitleTwo
+          hero {
+            heroHeading
+          }
+          socialLinks {
+            platform
+            url
+          }
+        }
+      }
+    }
+  `);
 
-  const { frontmatter, rawMarkdownBody } = content;
-  // const { frontmatter, rawMarkdownBody } = content;
+  console.log(data);
+
+  const configHero = data?.allDataJson?.nodes[0];
+
+  if (!configHero) {
+    return <div>No data found</div>;
+  }
   return (
     <StyledSection>
       <Heading
@@ -51,67 +71,61 @@ const Hero = ({ content }) => {
           ...theme.styles.h1,
         }}
       >
-        {frontmatter.greetings}
-        <span role='img' aria-label='emoji'>
-          {frontmatter.emoji}
-        </span>
+        {configHero.siteTitle}
+        {/* <span></span> */}
+        <span role='img' aria-label='emoji'></span>
+
         <br />
-        {frontmatter.title}
+        {configHero.siteTitleTwo}
       </Heading>
       <Heading
         sx={{
           ...theme.styles.h3,
         }}
       >
-        {frontmatter.subtitlePrefix}{' '}
-        <span className='highlighted'>{frontmatter.subtitleHighlight}</span>
-      </Heading>
+        Surfing the world wide web
+        <br />
+        <span className='highlighted'>for all front end dev insight</span>
+      </Heading>{' '}
       <Heading
         sx={{
           ...theme.styles.h4,
         }}
       >
-        {rawMarkdownBody}
+        Thanks for stopping by!
       </Heading>
-      <Text sx={theme.text.paragraph}>
-        From a young age, I was doodling in my notebook, creating makeshift
-        comic books experimenting with themed fonts, and always exploring ways
-        to express my creativity. A passion for digital expression grew during
-        the MySpace era and later led me to professional{' '}
-        <Link
-          href='https://www.georgestreetphoto.com/'
-          sx={{
-            variant: 'links.bold',
-          }}
-        >
-          {' '}
-          photography.{' '}
-        </Link>{' '}
-        But I yearned for something more later soon after - a platform for
-        showcasing my work. That's when I discovered the world of web
-        development. It offered not only a platform for my photography but also
-        opened up countless opportunities, landing me gigs that allowed me to
-        combine all my interests and skills. Today, as a{' '}
-        <Link
-          href='https://www.roberthalf.com/us/en'
-          sx={{
-            variant: 'links.bold',
-          }}
-        >
-          Web Developer{' '}
-        </Link>{' '}
-        , I merge my love for design patterns, typography, digital creativity,
-        branding, and photography to create unique and impactful digital
-        experiences.
+      <Text sx={theme.text.paragraph}>{configHero.heroDescription}</Text>{' '}
+      <Text
+        sx={{
+          ...theme.text.paragraph,
+        }}
+      >
+        It's mind-boggling how active the front-end development ecosystem has
+        been. It feels like not so long ago I stumbled upon this world while
+        needing a solution to market my photography services at the time.
       </Text>
+      <br />
+      <Text
+        sx={{
+          ...theme.text.paragraph,
+          mb: 3, // Bottom margin for spacing
+          mt: 1,
+        }}
+      >
+        The variety of frameworks that have come, gone, and remained the most
+        used before I even began my front-end journey is remarkable.
+      </Text>
+      <Text
+        sx={{
+          // textAlign: 'center',
 
-      {/* <div className="description">random things</div>
-      <ul>
-        <li>My very first job was working as a photographer </li>
-        <li>My dog's name is burrito</li>
-        <li>Mr. Robot is my fav</li>
-        <li>Currenly reading </li>
-      </ul> */}
+          mt: 4,
+          display: 'block',
+          ...theme.text.heading,
+        }}
+      >
+        This is where I compile some of my favorite discoveries and concepts.
+      </Text>
     </StyledSection>
   );
 };

@@ -8,6 +8,7 @@ import theme from '../gatsby-plugin-theme-ui';
 import styled from 'styled-components';
 import GlobalStyle from '../styles/globalStyle';
 import '../assets/css/main.css';
+import Hero from './Hero';
 const StyledLayout = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -29,7 +30,9 @@ const Layout = ({ children }) => {
         <StyledLayout>
           <GlobalStyle />
           <Header />
+
           {/* <Navbar /> */}
+
           {children}
           <Footer />
         </StyledLayout>
